@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://krhdtborhhwe"]
+
+[ext_resource type="Script" uid="uid://bg6d4l2q26ytn" path="res://character_body_2d.gd" id="1_p8qpx"]
+[ext_resource type="PackedScene" uid="uid://krhdtborhhwe" path="res://collision_shape_2d.tscn" id="2_y8tii"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_p8qpx")
+
+[node name="CollisionShape2D" parent="." instance=ExtResource("2_y8tii")]
+position = Vector2(-34, 167)
