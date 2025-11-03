@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dsd5qf60ok0m1"]
+
+[ext_resource type="AudioStream" uid="uid://denji7l78e44w" path="res://CHP1 MISSION1 (CH+MG).wav" id="1_uw4ae"]
+
+[node name="mission 1" type="AudioStreamPlayer"]
+stream = ExtResource("1_uw4ae")
+autoplay = true
