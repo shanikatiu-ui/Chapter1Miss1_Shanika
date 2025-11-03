@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://j4eumrhoscnv"]
-
-[ext_resource type="AudioStream" uid="uid://4k6tdnvxo7of" path="res://CHP1 OPENING (MG).wav" id="1_hbdb0"]
-
-[node name="scene1 intro MG" type="AudioStreamPlayer"]
-stream = ExtResource("1_hbdb0")
-autoplay = true

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=4 format=3 uid="uid://2hjr1sf5ue24"]
+
+[ext_resource type="Script" uid="uid://bufxyvd5nay1r" path="res://InventoryItem.gd" id="1_m2mgm"]
+[ext_resource type="Texture2D" uid="uid://cgi3l1hy64ova" path="res://ASSETS/THROWABLES/books.png" id="2_ckd0g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tn83j"]
+atlas = ExtResource("2_ckd0g")
+region = Rect2(0, 0, 15.9636, 16.106)
+
+[resource]
+script = ExtResource("1_m2mgm")
+texture = SubResource("AtlasTexture_tn83j")
+name = "book"
+metadata/_custom_type_script = "uid://bufxyvd5nay1r"

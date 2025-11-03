@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://cgaxv0wrq3j7e"]
+
+[ext_resource type="Texture2D" uid="uid://cgi3l1hy64ova" path="res://ASSETS/THROWABLES/books.png" id="1_8tdmu"]
+[ext_resource type="PackedScene" uid="uid://doe2rbjgacuff" path="res://Scenes/killzone.tscn" id="2_ry5e8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ry5e8"]
+atlas = ExtResource("1_8tdmu")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mwqqd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ry5e8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dn4pd"]
+radius = 7.0
+height = 16.0
+
+[node name="Guards" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_mwqqd")
+
+[node name="Killzone" parent="AnimatedSprite2D" instance=ExtResource("2_ry5e8")]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Killzone"]
+position = Vector2(-1, 1)
+shape = SubResource("CapsuleShape2D_dn4pd")

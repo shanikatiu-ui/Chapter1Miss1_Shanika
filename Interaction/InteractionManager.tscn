@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfw0dq3kn7rtv"]
+
+[ext_resource type="Script" uid="uid://c8sqo7ovoixv" path="res://Interaction/interaction_manager.gd" id="1_p4lj5"]
+
+[node name="InteractionManager" type="Node2D"]
+script = ExtResource("1_p4lj5")
+
+[node name="Label" type="Label" parent="."]
+z_index = 20
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -40.0
+offset_right = 40.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "[E] to Hide"
+horizontal_alignment = 1
+vertical_alignment = 1
