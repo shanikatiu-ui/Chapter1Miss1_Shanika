@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://0g3sqp4avqv2"]
+
+[ext_resource type="Script" uid="uid://elque2o6460t" path="res://cupping.gd" id="1_h4lg5"]
+[ext_resource type="Texture2D" uid="uid://b8q2x075d7qpd" path="res://ASSETS/BACKGROUND/small deets (1).png" id="2_h4lg5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8h541"]
+size = Vector2(18, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h4lg5"]
+size = Vector2(17, 12.75)
+
+[node name="cupping" type="CharacterBody2D"]
+collision_layer = 11
+collision_mask = 11
+script = ExtResource("1_h4lg5")
+
+[node name="cupping" type="Sprite2D" parent="."]
+position = Vector2(0.500001, 1.96875)
+scale = Vector2(0.479167, 0.48125)
+texture = ExtResource("2_h4lg5")
+region_enabled = true
+region_rect = Rect2(203.552, 410.103, 48.9651, 50.1884)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_8h541")
+
+[node name="HitArea" type="Area2D" parent="."]
+collision_layer = 128
+collision_mask = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitArea"]
+position = Vector2(1, -1.375)
+shape = SubResource("RectangleShape2D_h4lg5")

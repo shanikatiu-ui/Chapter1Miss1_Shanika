@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://da35fdmqdlysm"]
+
+[ext_resource type="Texture2D" uid="uid://cgi3l1hy64ova" path="res://ASSETS/THROWABLES/books.png" id="1_hs6vm"]
+[ext_resource type="PackedScene" uid="uid://doe2rbjgacuff" path="res://Scenes/killzone.tscn" id="2_v1vm3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hs6vm"]
+atlas = ExtResource("1_hs6vm")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v1vm3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hs6vm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4m3tu"]
+size = Vector2(12, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v8lqy"]
+size = Vector2(11, 12)
+
+[node name="ENEMY DZ" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-2, -8)
+sprite_frames = SubResource("SpriteFrames_v1vm3")
+
+[node name="Killzone" parent="AnimatedSprite2D" instance=ExtResource("2_v1vm3")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Killzone"]
+shape = SubResource("RectangleShape2D_4m3tu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3, -8)
+shape = SubResource("RectangleShape2D_v8lqy")
